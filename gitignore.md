@@ -1,0 +1,4 @@
+// pycharm env
+./venv
+./venv/*
+
