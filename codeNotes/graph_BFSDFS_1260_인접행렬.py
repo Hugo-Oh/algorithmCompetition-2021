@@ -14,7 +14,7 @@ for _ in range(M):
 
 visit = [0 for _ in range(N+1)]
 stack = [V]
-#visit[V] = 1
+ visit[V] = 1
 
 # 1. DFS
 while stack:

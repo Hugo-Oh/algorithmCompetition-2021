@@ -1,25 +1,26 @@
 import sys
 sys.stdin = open("input.txt", "rt")
 
-# 인접행렬로 풀기
+# 인접리스트로 풀기
 N = int(input())
 V = int(input())
-graph = [[0] * (N+1) for _ in range(N+1)]
-visited = [0] * (N+1)
+graph = [[] * (N+1) for _ in range(N+1)]
+visited = []
 counter = 0
+
 for _ in range(V):
     start, end = map(int, input().split())
-    graph[start][end] = 1
-    graph[end][start] = 1
+    graph[start].append(end)
+    graph[end].append(start)
 
-def DFS(Node):
+start = 1
+def dfs(nowNode):
     global counter
-    visited[Node] = 1
-
-    for nextNode in range(1, N+1):
-        if graph[Node][nextNode] == 1 and visited[nextNode] == 0:
-            DFS(nextNode)
+    visited.append(nowNode)
+    for nextNode in graph[nowNode]:
+        if nextNode not in visited:
             counter += 1
+            dfs(nextNode)
 
-DFS(1)
+dfs(start)
 print(counter)

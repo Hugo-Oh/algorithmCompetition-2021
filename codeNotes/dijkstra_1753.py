@@ -12,6 +12,7 @@ graph = [[] for _ in range(V+1)]
 for _ in range(E):
     s, e, c = map(int, input().split())
     graph[s].append([e, c])
+    #graph[e].append([s, c])
 
 
 def dijkstra(g, start):
