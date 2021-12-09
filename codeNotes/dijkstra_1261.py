@@ -9,10 +9,10 @@ graph = [[] for _ in range(N+1)]
 for s in range(1, N+1):
     wall = list(map(int, input()))
     for e in range(1, M+1):
-        if wall[e-1] == 1:
             graph[s].append([e, 1])
         else:
             graph[s].append([e, 0])
+        if wall[e-1] == 1:
 
 for r in graph:
     print(r)
