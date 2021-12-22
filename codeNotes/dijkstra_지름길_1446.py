@@ -13,7 +13,6 @@ for _ in range(N):
     s, e, cost = map(int, input().split())
     graph[s].append([cost, e])
 distances = [float('inf') for _ in range(100001)]
-
 distances[0] = 0
 
 while heap:
