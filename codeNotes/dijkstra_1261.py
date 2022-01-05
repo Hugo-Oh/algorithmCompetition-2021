@@ -39,13 +39,6 @@ while q:
                 hq.heappush(q, [next_y, next_x, cur_c])
             visit[next_y][next_x] = 1
 
-print(distances)
-
-
-
-
-
-
 
 for r in graph:
     print(r)
