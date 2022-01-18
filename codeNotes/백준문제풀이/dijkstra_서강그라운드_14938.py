@@ -1,6 +1,6 @@
 import sys
 import heapq as hq
-sys.stdin = open("input.txt","rt")
+sys.stdin = open("input.txt", "rt")
 
 N, M, R = map(int, input().split())
 items = list(map(int, input().split()))
